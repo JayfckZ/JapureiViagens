@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japurei</title>
+    <link rel="stylesheet" href="./_lib/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+    
+
+    <style>
+        header, footer{
+            background-color: #002FA7;
+        }
+
+        header{
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+
+
+        h1{
+            font-family: 'Francois One', sans-serif;
+            color: #fff;
+            font-size: 32px;
+        }
+
+        #destaque h2, .tab-pane{
+            padding-top: 50px;
+        }
+        h2{
+            margin-bottom: 32px;
+        }
+
+        section .container{
+            background-color: #fff;
+        }
+        .navbar-nav .nav-link.active{
+            background-color: #001856;
+            color: white;
+        }
+
+
+        .nav-link{
+            text-align: center;
+        }
+        
+        #destino, #info{
+            padding-top: 70px;
+        }
+
+        .card{
+            margin-bottom: 56px;
+        }
+
+        table{
+            border-radius: 10px;
+        }
+        .table .first{
+            border-right: 1px solid gray;
+        }
+
+        .nav-link, .nav-link:hover{
+            color: white;
+        }
+        #info .nav-link{
+            color: #001856;
+        }
+
+        footer{
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 767px){
+            #vg, #btn-vg{
+                display: none;
+            }
+        } 
+
+
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container navbar-expand-md">
+            <div class="navbar">
+                <h1>Japurei Viagens</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navegar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="navegar">
+                    <ul class="nav nav-pills navbar-nav">
+                        <li class="nav-item">
+                            <a href="#destaque" class="nav-link active">Destaque</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#destinos" class="nav-link">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#info" class="nav-link">Informações</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- CORPO E RODAPÉ -->
+    <div data-bs-spy="scroll" data-bs-target="header">
+        <section id="destaque">
+            <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="3500"  class="carousel-item active">
+                        <img class="w-100" src="./images/sld-rio.png" alt="">
+                    </div>
+                    <div data-bs-interval="2500" class="carousel-item">
+                        <img class="w-100" src="./images/sld-paris.png" alt="">
+                    </div>
+                    <div data-bs-interval="2500" class="carousel-item">
+                        <img class="w-100" src="./images/sld-eua.png" alt="">
+                    </div>
+                    <div data-bs-interval="2500" class="carousel-item">
+                        <img class="w-100" src="./images/sld-japao.png" alt="">
+                    </div>
+                    <div data-bs-interval="2500" class="carousel-item">
+                        <img class="w-100" src="./images/sld-water.png" alt="">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h6>VENHA DESCOBRIR SEU PRÓXIMO <strong>DESTINO</strong></h6>
+                    </div>
+                    <div class="carousel-indicators d-none d-md-flex">
+                        <button data-bs-target="carrossel" data-bs-slide-to="0" class="active" type="button"></button>
+                        <button data-bs-target="carrossel" data-bs-slide-to="1" type="button"></button>
+                        <button data-bs-target="carrossel" data-bs-slide-to="2" type="button"></button>
+                        <button data-bs-target="carrossel" data-bs-slide-to="3" type="button"></button>
+                        <button data-bs-target="carrossel" data-bs-slide-to="4" type="button"></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <h2>Destaques</h2>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card">
+                            <img src="./images/noruega.png" class="w-180px">
+                            <div class="card-header">
+                                <h4 class="card-title">Bryggen</h4>
+                                <h5 class="card-subtitle">Bergen, Noruega</h5>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem vero quia magni, adipisci corrupti libero tempora? Qui expedita voluptatum quae doloremque optio, dicta voluptas inventore ullam veritatis, nam consequuntur!</p>
+                                <a href="#info" class="btn btn-primary">Consultar pacotes</a>
+                            </div>
+                        </article>                        
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card">
+                            <img src="./images/suecia.png" alt="" srcset="">
+                            <div class="card-header">
+                                <h4 class="card-title">Castelo Gripsholm</h4>
+                                <h5 class="card-subtitle">Mariefred, Suécia</h5>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem vero quia magni, adipisci corrupti libero tempora? Qui expedita voluptatum quae doloremque optio, dicta voluptas inventore ullam veritatis, nam consequuntur!</p>
+                                <a href="#info" class="btn btn-primary">Consultar pacotes</a>
+                            </div>
+                        </article>                        
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card">
+                            <img src="./images/alemanha.png" alt="" srcset="">
+                            <div class="card-header">
+                                <h4 class="card-title">Campo de tulipas, Munique</h4>
+                                <h5 class="card-subtitle">Alemanha</h5>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem vero quia magni, adipisci corrupti libero tempora? Qui expedita voluptatum quae doloremque optio, dicta voluptas inventore ullam veritatis, nam consequuntur!</p>
+                                <a href="#info" class="btn btn-primary">Consultar pacotes</a>
+                            </div>
+                        </article>                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="destinos">
+            <div class="container">
+                <h2>Destinos</h2>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <article class="card">
+                            <img src="./images/grecia.png" alt="" srcset="">
+                            <div class="card-header">
+                                <h4 class="card-title">Santorini</h4>
+                                <h5 class="card-subtitle">Grécia</h5>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem vero quia magni, adipisci corrupti libero tempora? Qui expedita voluptatum quae doloremque optio, dicta voluptas inventore ullam veritatis, nam consequuntur!</p>
+                                <a href="#info" class="btn btn-primary">Consultar pacotes</a>
+                            </div>
+                        </article>                        
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <article class="card">
+                            <img src="./images/barbados.png" alt="" srcset="">
+                            <div class="card-header">
+                                <h4 class="card-title">Barbados</h4>
+                                <h5 class="card-subtitle">Caribe</h5>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem vero quia magni, adipisci corrupti libero tempora? Qui expedita voluptatum quae doloremque optio, dicta voluptas inventore ullam veritatis, nam consequuntur!</p>
+                                <a href="#info" class="btn btn-primary">Consultar pacotes</a>
+                            </div>
+                        </article>                        
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <article class="card">
+                            <img src="./images/maldivas.png" alt="" srcset="">
+                            <div class="card-header">
+                                <h4 class="card-title">Thulusdhoo</h4>
+                                <h5 class="card-subtitle">Ilhas Maldivas</h5>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem vero quia magni, adipisci corrupti libero tempora? Qui expedita voluptatum quae doloremque optio, dicta voluptas inventore ullam veritatis, nam consequuntur!</p>
+                                <a href="#info" class="btn btn-primary">Consultar pacotes</a>
+                            </div>
+                        </article>                        
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <article class="card">
+                            <img src="./images/canada.png" alt="" srcset="">
+                            <div class="card-header">
+                                <h4 class="card-title">Yukon</h4>
+                                <h5 class="card-subtitle">Canadá</h5>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem vero quia magni, adipisci corrupti libero tempora? Qui expedita voluptatum quae doloremque optio, dicta voluptas inventore ullam veritatis, nam consequuntur!</p>
+                                <a href="#info" class="btn btn-primary">Consultar pacotes</a>
+                            </div>
+                        </article>                        
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <article class="card">
+                            <img src="./images/japao.png" alt="" srcset="">
+                            <div class="card-header">
+                                <h4 class="card-title">Kanazawa</h4>
+                                <h5 class="card-subtitle">Japão</h5>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem vero quia magni, adipisci corrupti libero tempora? Qui expedita voluptatum quae doloremque optio, dicta voluptas inventore ullam veritatis, nam consequuntur!</p>
+                                <a href="#info" class="btn btn-primary">Consultar pacotes</a>
+                            </div>
+                        </article>                        
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <article class="card">
+                            <img src="./images/argentina.png" alt="" srcset="">
+                            <div class="card-header">
+                                <h4 class="card-title">Bariloche</h4>
+                                <h5 class="card-subtitle">Argentina</h5>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem vero quia magni, adipisci corrupti libero tempora? Qui expedita voluptatum quae doloremque optio, dicta voluptas inventore ullam veritatis, nam consequuntur!</p>
+                                <a href="#info" class="btn btn-primary">Consultar pacotes</a>
+                            </div>
+                        </article>                        
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <article class="card">
+                            <img src="./images/angeles.png" alt="" srcset="">
+                            <div class="card-header">
+                                <h4 class="card-title">Los Angeles</h4>
+                                <h5 class="card-subtitle">Estados Unidos</h5>
+                            </div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto rem vero quia magni, adipisci corrupti libero tempora? Qui expedita voluptatum quae doloremque optio, dicta voluptas inventore ullam veritatis, nam consequuntur!</p>
+                                <a href="#info" class="btn btn-primary">Consultar pacotes</a>
+                            </div>
+                        </article>                        
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="info">
+            <div class="container">
+                <h2>Informações</h2>
+                <div class="row">
+                    <div class="col">
+                        <nav class="nav nav-tabs">
+                            <button data-bs-toggle="tab" data-bs-target="#vg" type="button" class="nav-link active" id="btn-vg">Visão Geral</button>
+                            <button data-bs-toggle="tab" data-bs-target="#pe" type="button" class="nav-link">Pacote Essencial</button>
+                            <button data-bs-toggle="tab" data-bs-target="#pc" type="button" class="nav-link">Pacote Conforto</button>
+                            <button data-bs-toggle="tab" data-bs-target="#ps" type="button" class="nav-link">Pacote Sofisticado</button>
+                            <button data-bs-toggle="tab" data-bs-target="#pex" type="button" class="nav-link">Pacote Executivo</button>
+
+                        </nav>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="vg">
+                                <h3>Visão Geral</h3>
+                                <table class="table table-secondary">
+                                    <thead>
+                                        <tr>
+                                            <th class="first">
+                                                Categoria
+                                            </th>
+                                            <th>
+                                                Pacote Essencial
+                                            </th>
+                                            <th>
+                                                Pacote Conforto
+                                            </th>
+                                            <th>
+                                                Pacote Sofisticado
+                                            </th>
+                                            <th>
+                                                Pacote Executivo
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="first">
+                                                Acomodação
+                                            </td>
+                                            <td>
+                                                Acomodações confortáveis
+                                            </td>
+                                            <td>
+                                                Acomodações confortáveis
+                                            </td>
+                                            <td>
+                                                Acomodações luxuosas
+                                            </td>
+                                            <td>
+                                                Acomodações luxuosas
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="first">
+                                                Refeições
+                                            </td>
+                                            <td>
+                                                Café da manhã incluso
+                                            </td>
+                                            <td>
+                                                Café da manhã e jantar inclusos
+                                            </td>
+                                            <td>
+                                                Todas as refeições inclusas
+                                            </td>
+                                            <td>
+                                                Todas as refeições inclusas
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="first">
+                                                Transporte
+                                            </td>
+                                            <td>
+                                                Não incluso
+                                            </td>
+                                            <td>
+                                                Transporte privado incluso
+                                            </td>
+                                            <td>
+                                                Transporte privado incluso
+                                            </td>
+                                            <td>
+                                                Transporte privado luxuoso incluso
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="first">
+                                                Atividades
+                                            </td>
+                                            <td>
+                                                Não incluso
+                                            </td>
+                                            <td>
+                                                Passeios Turísticos opcionais incluso
+                                            </td>
+                                            <td>
+                                                Excursões e atividades locais opcionais inclusas
+                                            </td>
+                                            <td>
+                                                Experiência personalizada e acesso a eventos exclusivos
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="first">
+                                                Guia
+                                            </td>
+                                            <td>
+                                                Não incluso
+                                            </td>
+                                            <td>
+                                                Guia local opcional incluso
+                                            </td>
+                                            <td>
+                                                Guia local especializado opcional incluso
+                                            </td>
+                                            <td>
+                                                Guia local especializado opcional incluso
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="tab-pane" id="pe">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Pacote Essencial</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        Descubra o mundo com nosso Pacote Essencial, projetado para viajantes que buscam flexibilidade e autonomia. Desfrute de acomodações confortáveis em destinos incríveis, começando o dia com um café da manhã inclusivo. Com transporte não incluso, você tem a liberdade de explorar por conta própria. Embora um guia não esteja incluído, a magia da descoberta espera por você em cada esquina.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="tab-pane" id="pc">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Pacote Conforto</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        Deixe-nos elevar sua experiência de viagem com o Pacote Conforto. Acomodações aconchegantes proporcionam o refúgio perfeito após dias repletos de exploração. Desfrute de café da manhã e jantar inclusos, proporcionando uma experiência gastronômica completa. Com transporte privado, relaxe e aproveite cada momento da jornada. Adicione uma dimensão extra à sua experiência com a opção de passeios turísticos, guiados por especialistas locais.                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="ps">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Pacote Sofisticado</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        Para uma jornada de luxo inigualável, escolha o Pacote Sofisticado. Desfrute de acomodações luxuosas, proporcionando uma estadia de classe mundial. Todas as refeições estão inclusas, proporcionando uma experiência culinária excepcional. Com transporte privado luxuoso, viaje com estilo e conforto. Explore cada destino com excursões e atividades locais inclusas, guiadas por especialistas para uma experiência verdadeiramente memorável. Opte por um guia local especializado para aprofundar sua compreensão dos destinos visitados.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="pex">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Pacote Executivo</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        Adentre o luxo supremo com nosso Pacote Executivo, uma experiência feita sob medida para os viajantes mais exigentes. Acomodações luxuosas definem o padrão para sua estadia, proporcionando conforto inigualável. Todas as refeições estão incluídas, apresentando uma culinária refinada que reflete a excelência. Desloque-se com elegância em transporte privado luxuoso, garantindo uma viagem suave e indulgente. Desfrute de excursões e atividades locais inclusas, mergulhando em experiências autênticas. Para uma compreensão mais profunda, escolha um guia local especializado opcional que transformará cada destino em uma narrativa enriquecedora. Este é o ápice do luxo e personalização em suas viagens.                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                Explorando Destinos &copy; 2024 - Todos os direitos reservados.
+            </div>
+        </footer>
+    </div>
+
+    <script src="./_lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
